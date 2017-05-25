@@ -1,0 +1,170 @@
+struct Message *parse(const char *msg) {
+
+        struct Message *parsed = malloc(sizeof(struct Message));
+
+        int i = 0;
+        char *buffer;
+        const char s[2] = " ";
+        char *token;
+        struct Message *head = NULL; //malloc(sizeof(struct Message));
+
+
+        token = strtok(msg, s);
+        strcpy(parsed->word, token);
+
+        head = parsed;
+        while (token != NULL) {
+            token = strtok(NULL, s);
+            struct Message *word = malloc(sizeof(struct Message));
+            head->next = word;
+            head = word;
+        }
+
+        return parsed;
+    }
+
+    /*while (concept->keywords != NULL) {
+                if (strcmp(concept->keywords,term) {
+                    return concept;
+                }
+                while(concept->keywords->next != NULL) {
+                    concept->keywords = concept->keywords->next;
+                    if (strcmp(concept->keywords, term)) {
+                        return concept;
+                    }
+                }
+            }*/
+
+        /*struct Word **water = malloc(sizeof(struct Word));
+        PeerNode *rain = malloc(sizeof(struct PeerNode));
+        strcpy(word->name, "water");
+        strcpy(rain->name, "raining");
+        water->checksum = 0xFF00FF;
+        rain->word = water;
+    */
+
+
+    //void save(void) {
+
+    /*    *//** the day this product makes its first million dollars we must do something meaningful to the society **//*
+        Idealogy *idealogy = malloc(sizeof(struct Idealogy));
+        strcpy(idealogy->name, "humanism");
+        Idea *idea = malloc(sizeof(struct Idea));
+        strcpy(idea->name, "understanding what is to be human");
+        idealogy->idea = idea;
+
+
+
+
+        object->month=6;
+        object->year=2013;
+        FILE * file= fopen("output", "wb");
+        if (file != NULL) {
+            fwrite(object, sizeof(struct date), 1, file);
+            fclose(file);
+        }
+
+        void saveFile(Struct1 *s1, Struct2 *s2, Struct3 s3) {
+            FILE *fp = NULL;
+            fp = fopen("save.bin", "w+b");
+
+            if (fp == NULL) {
+                printf("Save failed.\n");
+            }
+
+            fwrite(s1, sizeof(Struct1), struct3.nElements, fp);
+            fwrite(s2, sizeof(Struct2), NELEMENTS, fp);
+            fwrite(&s3, sizeof(Struct3), 1, fp);
+
+            printf("Save done.\n");
+        }
+        */
+
+    /*
+     *
+     *     typedef struct Message {
+            char *word;
+            struct Message *next;
+        } Message;
+
+    /*
+    typedef struct NullNode {
+        struct PeerNode *parent;
+        char *name;
+        char *val;
+    };
+        typedef struct Word {
+            char *id;
+            char *name;
+            int checksum;
+            struct Word *next;
+        } Word;
+
+
+
+
+    void controller(void) {
+            const char *incomemsg = "hello, how are you?";
+            struct Message *msg = parse(incomemsg);
+            char *water = "water";
+            struct Concept *result = search(water);
+            printf("search completed we found %s", result->name);
+        }
+    */
+    /*    struct Concept *search(char *term) {
+
+            char *step = malloc(sizeof(199));
+            struct Message *message = parse("Hello, how are you?");
+            struct Idealogy *weather = bootstrap();
+            struct Concept *root = weather->concept;
+            struct Concept *result = malloc(sizeof(struct Concept));
+
+            //research(result->keywords)
+            memcpy(result, (Concept *) traverse(result->related, term), NULL);
+            if (result != NULL) {
+                printf("found what we are looking for\n");
+                printf("%s, \n", result->name);
+                return result;
+            }
+
+            return NULL;
+        }*/
+
+    /*while(step != NULL) {
+        if (strcmp(root->name, term)) {
+            return root;
+        } else if (root->associated != NULL) {
+            result = traverse(root->associated, term);
+            if (result != NULL) {
+                return result;
+            }
+        } else if (root->related != NULL) {
+            result = traverse(root->related, term);
+        }
+    }*/
+    //}
+
+    //get rootnode list
+    //download blockchain
+    //broadcast messages
+/*
+        struct Concept *rain = (struct Concept *) factory("rain");
+        struct Concept *water = (struct Concept *) factory("water");
+        struct Concept *thunder =(struct Concept *) factory("thunder");
+        struct Concept *cloud =(struct Concept *) factory("cloud");
+*/
+
+/*
+        weather->concept = malloc(sizeof(rain));
+        weather->concept = rain;
+*/
+
+/*
+        link(rain, water);
+        link(rain, thunder);
+        link(water, thunder);
+        link(thunder, cloud);*/
+        //rain->related = water;
+        //water->related = thunder;
+        thunder->related = cloud;
+
